@@ -9,6 +9,11 @@ class XylophoneApp extends StatefulWidget {
 }
 
 class _XylophoneAppState extends State<XylophoneApp> {
+  void playSound(int number)
+  {
+    final player = AudioCache();
+    player.play('note$number.wav');
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,8 +24,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
             children: <Widget>[
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
+                  playSound(1);
                 },
                 child: Container(
                   color: Colors.red,
@@ -29,8 +33,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note2.wav');
+                  playSound(2);
                 },
                 child: Container(
                   color: Colors.orange,
@@ -39,8 +42,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note3.wav');
+                  playSound(3);
                 },
                 child: Container(
                   color: Colors.yellow,
@@ -49,8 +51,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note4.wav');
+                  playSound(4);
                 },
                 child: Container(
                   color: Colors.green,
@@ -59,8 +60,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note5.wav');
+                  playSound(5);
                 },
                 child: Container(
                   color: Colors.teal,
@@ -69,8 +69,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note6.wav');
+                  playSound(6);
                 },
                 child: Container(
                   color: Colors.blueAccent,
@@ -79,8 +78,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note7.wav');
+                  playSound(7);
                 },
                 child: Container(
                   color: Colors.purple,
